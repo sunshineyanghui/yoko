@@ -1,9 +1,9 @@
 import React from 'react';
 import echarts from 'echarts';
 let myData=[
-  'html','css','jquery','javascript','react','node'
+  'html','css','js','react','node'
 ]
-let num =[5, 20, 36, 10, 10, 20]
+let num =[5, 20, 36, 10, 10]
 class Work extends React.Component {
   componentDidMount(){
     var myChart = echarts.init(document.getElementById('main'));
