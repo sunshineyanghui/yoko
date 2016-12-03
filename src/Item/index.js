@@ -1,4 +1,6 @@
 import React from 'react';
+import marked from 'marked';
+
 class Item extends React.Component{
   render(){
     console.log(this.props.params.title);
@@ -7,6 +9,7 @@ class Item extends React.Component{
     return(
       <div>
         {content}
+        <div dangerouslySetInnerHTML={{__html:marked('# assdadjhj')}}></div>
       </div>
     )
   }
