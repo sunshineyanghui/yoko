@@ -1,5 +1,6 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Link } from 'react-router';
 class BlogCard extends React.Component{
   render(){
     return(
@@ -8,7 +9,7 @@ class BlogCard extends React.Component{
         <div className="blog-content clearfix">
           <h3>{this.props.title}</h3>
           <p>{this.props.desc}</p>
-          <RaisedButton label="阅读更多" primary={true} />
+          <RaisedButton label="阅读更多" href={`#/item/${this.props.index}`} primary={true} buttonStyle={{backgroundColor:'#FF9800'}}/>
         </div>
       </div>
     )
