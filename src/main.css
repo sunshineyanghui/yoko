@@ -23,3 +23,12 @@
 .git-card h2{ margin: 0; color: #64DD17;text-align: left;}
 .about-form{ margin: 0 auto; display: inline; width: 80%; max-width: 560px;}
 .show-git{ display: flex; box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; justify-content:space-around; color: #212121; font-size: 18px; padding: 10px 0;}
+
+/*blog*/
+.blog-warp{ flex-grow: 1; margin-top: 10px;}
+.blog-card{ padding: 10px; max-width: 600px; margin: 0 auto;}
+.blog-index{ background-color: #64DD17; font-size: 24px; text-align: center; color: #fff;  height: 60px; padding-top: 10px;}
+.blog-index span{ border-radius: 50%; display: inline-block; width: 40px; height: 40px; border: 1px solid #fff; line-height: 40px;}
+.blog-content{ background-color: #fff;box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; padding: 10px;}
+.blog-content h3{ margin:10px 0; color: #212121;}
+.blog-content button{ border:1px solid #ccc;}
