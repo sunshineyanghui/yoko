@@ -11,9 +11,10 @@ class Item extends React.Component{
   }
   componentDidMount(){
     let address = this.props.params.title;
-    console.log(address);
+    // console.log(address);
     axios.get(`https://raw.githubusercontent.com/sunshineyanghui/yoko/master/data/${address}.md`)
     .then( res => this.setState({data:res.data}) )
+    .catch( err => alert(err))
   }
   render(){
     // console.log(this.props.params.title);
@@ -24,7 +25,7 @@ class Item extends React.Component{
       <div className="item-wrap">
 
         {/* <div dangerouslySetInnerHTML={{__html:marked('# assdadjhj')}}></div> */}
-        {this.state.data.length==0 ?  <Loading /> : <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}}/> }
+        {this.state.data.length==0 ?  <Loading /> : <div className="post-wrap" dangerouslySetInnerHTML={{__html:marked(this.state.data)}}/> }
 
       </div>
     )

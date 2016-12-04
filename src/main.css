@@ -33,3 +33,5 @@
 .blog-content h3{ margin:10px 0; color: #212121;}
 .blog-content button{ border:1px solid #ccc;}
 .item-wrap{ flex-grow: 1;}
+
+.post-wrap{}
