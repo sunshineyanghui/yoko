@@ -32,3 +32,4 @@
 .blog-content{ background-color: #fff;box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; padding: 10px;}
 .blog-content h3{ margin:10px 0; color: #212121;}
 .blog-content button{ border:1px solid #ccc;}
+.item-wrap{ flex-grow: 1;}
