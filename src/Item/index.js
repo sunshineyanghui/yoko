@@ -2,6 +2,7 @@ import React from 'react';
 import marked from 'marked';
 import axios from 'axios';
 import Loading from '../component/Loading';
+import　hljs from 'highlight.js';
 class Item extends React.Component{
   constructor(){
     super();
@@ -17,6 +18,12 @@ class Item extends React.Component{
     .catch( err => alert(err))
   }
   render(){
+    //设置代码高亮
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     // console.log(this.props.params.title);
     // let content = this.props.params.title==0 ? '这是第一个页面' :
     // this.props.params.title ==1 ? '这是第二个页面' : '这是第ｎ个页面'
@@ -25,7 +32,9 @@ class Item extends React.Component{
       <div className="item-wrap">
 
         {/* <div dangerouslySetInnerHTML={{__html:marked('# assdadjhj')}}></div> */}
-        {this.state.data.length==0 ?  <Loading /> : <div className="post-wrap" dangerouslySetInnerHTML={{__html:marked(this.state.data)}}/> }
+        {
+          this.state.data.length==0 ?  <Loading /> : <div className="post-content" dangerouslySetInnerHTML={{__html:marked(this.state.data)}}/>
+        }
 
       </div>
     )
