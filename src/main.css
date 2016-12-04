@@ -1,6 +1,15 @@
 .btn:active:focus,.btn:focus,.btn:active,.btn:visited {outline:none; color: #fff}
 /*app*/
 .my-wrap{ display: flex; flex-direction: column; height: 100vh;}
+@media(min-width:760px){
+  .my-wrap{flex-direction: row;}
+}
+
+.leftnav-wrap{ width: 260px; background-color: #64DD17;}
+.leftnav-wrap h3{ color: #fff; text-align: center; margin: 0; border-bottom: 1px solid #ccc; padding: 20px 0;}
+.leftnav-wrap a{ display: block; padding: 10px; color: #fff; font-size: 20px; text-decoration: none;}
+.leftnav-wrap a:hover{ background-color: rgba(0, 0, 0, 0.3);}
+.leftnav-wrap .leftnav-a{ padding-left: 10px;}
 .main{ flex-grow: 1; background-color: #ccc; overflow-y: scroll; display: flex;}
 /*nav-header*/
 .nav-header{ display: flex; justify-content: space-between; background-color: #64DD17; height: 80px; padding: 0 5px; align-items: center; flex-shrink: 0;}
